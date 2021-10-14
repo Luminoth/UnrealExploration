@@ -2,8 +2,3 @@
 
 #include "UnrealExplorationGameModeBase.h"
 #include "PlayerBase.h"
-
-AUnrealExplorationGameModeBase::AUnrealExplorationGameModeBase()
-{
-    DefaultPawnClass = APlayerBase::StaticClass();
-}

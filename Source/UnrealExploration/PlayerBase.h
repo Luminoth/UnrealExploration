@@ -14,7 +14,7 @@ class UNREALEXPLORATION_API APlayerBase : public APaperCharacter
 {
     GENERATED_BODY()
 
-    UStaticMeshComponent *CreateTemporaryMesh();
+    void CreateTemporaryMesh();
 
     UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = Camera, meta = (AllowPrivateAccess = "true"))
     class USpringArmComponent *CameraBoom;

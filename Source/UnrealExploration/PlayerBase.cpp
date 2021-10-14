@@ -14,7 +14,7 @@ APlayerBase::APlayerBase()
     bUseControllerRotationRoll = false;
 
     // TODO: remove this when the real character exists
-    CreateTemporaryMesh()->SetupAttachment(GetSprite());
+    CreateTemporaryMesh();
 
     // setup the camera
     CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
@@ -34,12 +34,11 @@ APlayerBase::APlayerBase()
     bReplicates = true;
 }
 
-UStaticMeshComponent *APlayerBase::CreateTemporaryMesh()
+void APlayerBase::CreateTemporaryMesh()
 {
     // create a temporary capsule mesh for the player
     UStaticMeshComponent *TemporaryMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Temporary Mesh"));
     UStaticMesh *TemporaryMesh = ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Engine/BasicShapes/Cylinder.Cylinder'")).Object;
     TemporaryMeshComponent->SetStaticMesh(TemporaryMesh);
-
-    return TemporaryMeshComponent;
+    TemporaryMeshComponent->SetupAttachment(GetSprite());
 }
