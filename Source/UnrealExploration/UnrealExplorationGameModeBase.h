@@ -7,11 +7,13 @@
 #include "UnrealExplorationGameModeBase.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class UNREALEXPLORATION_API AUnrealExplorationGameModeBase : public AGameModeBase
 {
-	GENERATED_BODY()
-	
+    GENERATED_BODY()
+
+public:
+    AUnrealExplorationGameModeBase();
 };
