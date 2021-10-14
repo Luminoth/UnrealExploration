@@ -1,5 +1,14 @@
 # Unreal Exploration
 
+* ~Main menu~
+* ~Pause menu~
+* Core loop
+* 2D platformer
+* Shoot enemies
+  * Object pool bullets
+* Collect items
+* Stream levels
+
 ## Notes
 
 * Re-usable UI widgets
