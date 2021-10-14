@@ -16,6 +16,12 @@ class UNREALEXPLORATION_API APlayerBase : public APaperCharacter
 
     UStaticMeshComponent *CreateTemporaryMesh();
 
+    UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = Camera, meta = (AllowPrivateAccess = "true"))
+    class USpringArmComponent *CameraBoom;
+
+    UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = Camera, meta = (AllowPrivateAccess = "true"))
+    class UCameraComponent *SideViewCameraComponent;
+
 public:
     APlayerBase();
 };
