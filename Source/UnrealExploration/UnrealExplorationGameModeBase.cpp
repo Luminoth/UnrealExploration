@@ -2,3 +2,7 @@
 
 #include "UnrealExplorationGameModeBase.h"
 #include "PlayerBase.h"
+
+AUnrealExplorationGameModeBase::AUnrealExplorationGameModeBase() : PlayerHealth(100)
+{
+}

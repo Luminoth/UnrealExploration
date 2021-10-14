@@ -6,7 +6,7 @@
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 
-APlayerBase::APlayerBase()
+APlayerBase::APlayerBase() : Health(0)
 {
     // only allow yaw rotation
     bUseControllerRotationPitch = false;
@@ -41,4 +41,15 @@ void APlayerBase::CreateTemporaryMesh()
     UStaticMesh *TemporaryMesh = ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Engine/BasicShapes/Cylinder.Cylinder'")).Object;
     TemporaryMeshComponent->SetStaticMesh(TemporaryMesh);
     TemporaryMeshComponent->SetupAttachment(GetSprite());
+}
+
+void APlayerBase::Damage(int amount)
+{
+    Health -= amount;
+
+    if (Health <= 0)
+    {
+        Health = 0;
+        UE_LOG(LogTemp, Warning, TEXT("Dead"));
+    }
 }

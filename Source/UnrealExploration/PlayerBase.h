@@ -22,6 +22,11 @@ class UNREALEXPLORATION_API APlayerBase : public APaperCharacter
     UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = Camera, meta = (AllowPrivateAccess = "true"))
     class UCameraComponent *SideViewCameraComponent;
 
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Player, meta = (AllowPrivateAccess = "true"))
+    int32 Health;
+
 public:
     APlayerBase();
+
+    void Damage(int amount);
 };
