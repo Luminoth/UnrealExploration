@@ -3,4 +3,4 @@
 #include "UnrealExploration.h"
 #include "Modules/ModuleManager.h"
 
-IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, UnrealExploration, "UnrealExploration" );
+IMPLEMENT_PRIMARY_GAME_MODULE(FDefaultGameModuleImpl, UnrealExploration, "UnrealExploration");
