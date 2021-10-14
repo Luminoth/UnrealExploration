@@ -13,4 +13,9 @@ UCLASS()
 class UNREALEXPLORATION_API APlayerBase : public APaperCharacter
 {
     GENERATED_BODY()
+
+    UStaticMeshComponent *CreateTemporaryMesh();
+
+public:
+    APlayerBase();
 };
